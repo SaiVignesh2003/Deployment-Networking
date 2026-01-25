@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  test-dockercompose:
+    container_name: ngnix-container
+    image: nginxdockertestnew:latest #build image of nginx-docker-f1
+    ports:
+      - 8080:80
+  testfile-dockercompose:
+    container_name: testfile-container
+    image : testfile:latest #build image of folder testfile server.js
+    ports: 
+      - 3000:3000
